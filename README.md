@@ -1,6 +1,6 @@
 # tmux-static-builder
 
-Simple container to build a staticly linked tmux binary.
+Simple container to build a static-linked tmux binary.
 
 ## Use
 
