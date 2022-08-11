@@ -1,4 +1,4 @@
-IMAGE_NAME="tmux-builder:latest"
+IMAGE_NAME="tmux-static-builder:latest"
 TMPDIR := $(shell mktemp -d /tmp/ocm-container-custom.XXXXX)
 CONTAINER_SUBSYS?="podman"
 
