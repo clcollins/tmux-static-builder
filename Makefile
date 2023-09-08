@@ -1,6 +1,6 @@
 REGISTRY_NAME := "quay.io"
 ORG_NAME := "chcollin"
-IMAGE_NAME := "tmux-static-builder"
+IMAGE_NAME := "tmux"
 IMAGE_TAG := "latest"
 TMPDIR := $(shell mktemp -d /tmp/ocm-container-custom.XXXXX)
 CONTAINER_SUBSYS?="podman"
@@ -13,7 +13,11 @@ all: check_env build
 
 .PHONY: build
 build: 
-	@podman build ${CACHE} -t ${REGISTRY_NAME}/${ORG_NAME}/${IMAGE_NAME} .
+	@${CONTAINER_SUBSYS} build ${CACHE} -t ${REGISTRY_NAME}/${ORG_NAME}/${IMAGE_NAME} .
+
+.PHONY: push
+push:
+	@${CONTAINER_SUBSYS} push ${REGISTRY_NAME}/${ORG_NAME}/${IMAGE_NAME}
 
 .PHONY: check_env
 check_env:
