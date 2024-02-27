@@ -17,7 +17,7 @@ ALLOW_DIRTY_CHECKOUT?=false
 default: all
 
 .PHONY: all
-all: isclean check_env build
+all: isclean check_env build tag push
 
 .PHONY: isclean
 isclean:
