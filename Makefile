@@ -1,7 +1,7 @@
 REGISTRY_NAME := "quay.io"
 ORG_NAME := "chcollin"
 IMAGE_NAME := "tmux"
-GIT_HASH := "$(shell git rev-parse HEAD | cut -c 1-8)"
+GIT_HASH := "$(shell git rev-parse --short HEAD)"
 
 TAG := ${REGISTRY_NAME}/${ORG_NAME}/${IMAGE_NAME}:${GIT_HASH}
 TAG_LATEST := ${REGISTRY_NAME}/${ORG_NAME}/${IMAGE_NAME}:latest
