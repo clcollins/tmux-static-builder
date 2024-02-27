@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora:36
+FROM registry.fedoraproject.org/fedora:39
 
 RUN dnf install --assumeyes gcc git automake autoconf python
 
