@@ -25,7 +25,7 @@ isclean:
 
 .PHONY: build
 build: 
-	@${CONTAINER_SUBSYS} build ${CACHE} -t ${TAG} .
+	@${CONTAINER_SUBSYS} build --build-arg=GIT_HASH=${GIT_HASH} ${CACHE} -t ${TAG} .
 
 .PHONY: tag
 tag:
