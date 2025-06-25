@@ -1,6 +1,6 @@
-FROM registry.fedoraproject.org/fedora:39
+FROM registry.fedoraproject.org/fedora:42
 
-RUN dnf install --assumeyes gcc git automake autoconf python
+RUN dnf install --assumeyes gcc git automake autoconf awk python
 
 ARG GIT_HASH="xxxxxxxx"
 LABEL tmux_static_builder_version=${GIT_HASH}
